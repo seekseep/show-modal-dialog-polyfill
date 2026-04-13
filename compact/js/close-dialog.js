@@ -1,7 +1,7 @@
 function closeDialog(data) {
   var name = window.name
   var opener = window.opener
-  var dialog = opener.dialogs[name]
-  dialog.close(data)
+  var callback = opener.callbacks[name]
+  callback(data)
   window.close()
 }
