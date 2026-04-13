@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>親画面</title>
+  </head>
+  <body>
+    <h1>親画面</h1>
+    <button id="openChildButton">子画面を開く</button>
+    <p id="result"></p>
+    <script src="./js/dialog.js"></script>
+    <script>
+      const openChildButton = document.getElementById("openChildButton");
+      const resultText = document.getElementById("result");
+
+      openChildButton.addEventListener("click", async () => {
+        resultText.textContent = "子画面からの結果を待っています...";
+        const result = await openDialog("child.html", "child", 400, 300);
+        console.log("子画面からの結果:", result);
+        resultText.textContent = `子画面からの結果: ${result}`;
+      });
+    </script>
+  </body>
+</html>
