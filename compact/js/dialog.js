@@ -4,13 +4,7 @@ function openDialog(url, name, callback) {
   window.open(url, name);
 
   dialogs[name] = {
-    closed: true,
-    data: null,
-    close: function (data) {
-      this.closed = true
-      this.data = data
-      callback(data)
-    }
+    close: callback
   }
 }
 
