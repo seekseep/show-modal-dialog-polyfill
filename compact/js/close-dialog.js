@@ -1,5 +1,3 @@
 function closeDialog(data) {
-  var callback = window.opener.callbacks[window.name]
-  callback(data)
-  window.close()
+  window.opener.callbacks[window.name](data) || window.close()
 }
