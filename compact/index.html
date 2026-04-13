@@ -11,9 +11,9 @@
       const openChildButton = document.getElementById("openChildButton");
       const resultText = document.getElementById("result");
 
-      openChildButton.addEventListener("click", () => {
+      openChildButton.addEventListener("click", function () {
         resultText.textContent = "子画面からの結果を待っています...";
-        openDialog("child.html", "child", (result) => {
+        openDialog("child.html", "child", function (result) {
           console.log("子画面からの結果:", result);
           resultText.textContent = `子画面からの結果: ${result}`;
         });

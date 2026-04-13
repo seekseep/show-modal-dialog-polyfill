@@ -10,8 +10,8 @@
     <script src="./js/close-dialog.js"></script>
     <script>
       const buttons = document.querySelectorAll("button");
-      buttons.forEach((button) => {
-        button.addEventListener("click", (event) => {
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function (event) {
           const value = event.target.value;
           closeDialog(value);
         });
