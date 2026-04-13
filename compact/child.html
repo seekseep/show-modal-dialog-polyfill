@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>子画面</title>
+  </head>
+  <body>
+    <h1>子画面</h1>
+    <button value="リンゴ">リンゴ</button>
+    <button value="バナナ">バナナ</button>
+    <button value="オレンジ">オレンジ</button>
+    <script src="./js/dialog.js"></script>
+    <script>
+      const buttons = document.querySelectorAll("button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+          const value = event.target.value;
+          closeDialog(value);
+        });
+      });
+    </script>
+  </body>
+</html>
